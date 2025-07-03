@@ -1,4 +1,5 @@
 <script>
+	import avatar from '$lib/assets/avatar.png'
 </script>
 <section id="about">
 	<style>
@@ -10,25 +11,47 @@
 		#about container {
 			display: flex;
 			flex-direction: row;
+			justify-content: center;
+			width: 100%;
 		}
 
 		#about div ul {
-			width: 50vw;
-		}
-		
-		#about h2 {
-			text-align: center;
-			font-size: 2.5rem;
-			width: 100%;
-			margin: 20px 0 0 0;
+			width: 70vw;
 		}
 
+		
 		.timeline {
+			text-align: left;
 			position: relative;
 			list-style: none;
-			padding: 0;
 			margin: 0;
+			height: 88vh;
+			width: 1200px;
+			max-width: calc(0.7 * 16.0 / 9.0 * 100vh);
+			padding-left: 40px;
 		}
+		
+		.extra {
+			text-align: left;
+			width: 400px;
+			max-width: calc(0.3 * 16.0 / 9.0 * 100vh);
+			display: flex;
+			flex-direction: column;
+		}
+		
+		#avatar {
+			width: 400px;
+			max-width: calc(0.3 * 16.0 / 9.0 * 100vh - 50px);
+			height: 400px;
+			max-height: calc(0.3 * 16.0 / 9.0 * 100vh - 50px);
+		}
+
+		.avatar {
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+
 
 		.tl-item {
 			margin-bottom: 10px;
@@ -36,13 +59,9 @@
 			padding-left: 20px;
 			display: flex;
 			flex-direction: column;
-			width: 300px;
+			width: 400px;
 		}
 
-		.tl-item div {
-			width: calc(20vw - 20px);
-			margin-right: 20px;
-		}
 
 		.tl-item h3 {
 			margin: 0;
@@ -55,9 +74,13 @@
 
 		.tl-item ul {
 			display: none;
+			text-align: left;
 			list-style: disc;
-			margin-left: 20px;
-			padding-left: 0;
+			width: calc(100% - 500px);
+			max-width: 750px;
+			padding: 20px;
+			border: solid 1px var(--fg-color);
+			background: var(--bg-color);
 		}
 
 		.tl-item:hover ul {
@@ -65,33 +88,25 @@
 			flex-direction: column;
 			position: absolute;
 			right: 0;
-			top: 0;
-			width: 400px;
-			height: 100%;
+			top: 70px;
 		}
 
 		.tl-item ul li {
 			margin-bottom: 5px;
 		}
-
-		.timeline {
-			width: 50vw;
-			padding: 0 20px;
-		}
-
-		.extra {
-			width: 30vw;
-			padding: 0 20px;
-		}
-
 	</style>
 	<h2>Sobre mí</h2>
 	<container>
 	<div class="extra">
-		<h3>Filosofía</h3>
-		<p>
-			Mi pasión reside en descomponer problemas complejos y constryur soluciones que conectan distintas disciplinas. Adaptando una mentalidad de resolución de problemas orientada a resultados, procuro comprender las necesidades desde múltiples perspectivas –ya sea el diseño mecánico, la lógica de control, la electrónica o la interfaz de usuario. Mi enfoque se caracteriza por la adaptabilidad y el aprendizaje continuo, impulsado por la búsqueda de soluciones innovadoras para cada desafío, siempre con la visión de un sistema superior, enfocado en la escalabilidad y la fiabilidad.
-		</p>
+		<div>
+			<h3>Filosofía</h3>
+			<p>
+				Mi pasión reside en descomponer problemas complejos y constryur soluciones que conectan distintas disciplinas. Adaptando una mentalidad de resolución de problemas orientada a resultados, procuro comprender las necesidades desde múltiples perspectivas –ya sea el diseño mecánico, la lógica de control, la electrónica o la interfaz de usuario. Mi enfoque se caracteriza por la adaptabilidad y el aprendizaje continuo, impulsado por la búsqueda de soluciones innovadoras para cada desafío, siempre con la visión de un sistema superior, enfocado en la escalabilidad y la fiabilidad.
+			</p>
+		</div>
+		<div class="avatar">
+			<img src={avatar} alt="avatar image" id="avatar"/>
+		</div>
 	</div>
 	<ul class="timeline">
 		<h3>Mi trayectoria</h3>
