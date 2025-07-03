@@ -21,7 +21,7 @@
 		.project ul {
 			list-style: none;
 			margin: 0;
-			padding: 0 10px;
+			padding: 10px 0;
 			align-items: center;
 			width: 100%;
 		}
@@ -30,8 +30,8 @@
 			background-color: var(--C1);
 			padding: 15px;
 			display: inline-flex;
-			width: calc(27% - 10px);
-			margin: 5px 10px;
+			width: calc(27% - 20px);
+			margin: 10px;
 			height: 20px;
 			align-items: center;
 		}
@@ -79,6 +79,7 @@
 
 		.project p {
 			margin: 20px;
+			text-align: left;
 		}
 
 		.project .img {
