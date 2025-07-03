@@ -7,21 +7,13 @@
 </script>
 
 <style>
-	#projects {
-		margin: 0;
-		padding: 0;
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-	}
-
 	#projects div {
-		height: 100%;
 		margin: 0;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		width: 100%;
 	}
 
 	#projects h2 {
