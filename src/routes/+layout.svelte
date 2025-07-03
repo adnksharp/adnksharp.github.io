@@ -63,11 +63,9 @@
 </style>
 
 <nav>
-	<a href="/">INICIO</a>
-	<a href="/robotic">ROBOTICA</a>
-	<a href="/code">PROGRAMACIÓN</a>
-	<a href="/electronic">ELECTRONICA</a>
-	<a href="/cad">MODELADO 3D</a>
+	<a href="#header">INICIO</a>
+	<a href="#projects">PROYECTOS</a>
+	<a href="#about">SOBRE MÍ</a>
 </nav>
  
 <slot />
