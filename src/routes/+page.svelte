@@ -43,10 +43,4 @@
 	<ATF />
 	<Projects />
 	<About />
-
-	<div id="scroll-points">
-		<a href="#header" class="scroll-point">&#9679;</a>
-		<a href="#projects" class="scroll-point">&#9675;</a>
-		<a href="#about" class="scroll-point">&#9675;</a>
-	</div>
 </div>

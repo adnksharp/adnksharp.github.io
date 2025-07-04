@@ -43,7 +43,8 @@
 			width: 400px;
 			max-width: calc(0.3 * 16.0 / 9.0 * 100vh - 50px);
 			height: 400px;
-			max-height: calc(0.3 * 16.0 / 9.0 * 100vh - 50px);
+			max-height: calc(88vh - 600px);
+			object-fit: contain;
 		}
 
 		.avatar {
@@ -99,13 +100,16 @@
 	<container>
 	<div class="extra">
 		<div>
+			<p>
+				Desarrollador en constante aprendizaje con interés en la intersección entre la electrónica y la programación. Me gusta explorar proyectos que involucran microcontroladores (Arduino, MicroLogix, ESP32), sistemas de control, análisis estructural (ANSYS APDL) y desarrollo web. Mi toolkit incluye lenguajes como C++, MATLAB, Python, JS, Bash y frameworks como Electron, React Native, Express y Mongosh.
+			</p>
 			<h3>Filosofía</h3>
 			<p>
 				Mi pasión reside en descomponer problemas complejos y constryur soluciones que conectan distintas disciplinas. Adaptando una mentalidad de resolución de problemas orientada a resultados, procuro comprender las necesidades desde múltiples perspectivas –ya sea el diseño mecánico, la lógica de control, la electrónica o la interfaz de usuario. Mi enfoque se caracteriza por la adaptabilidad y el aprendizaje continuo, impulsado por la búsqueda de soluciones innovadoras para cada desafío, siempre con la visión de un sistema superior, enfocado en la escalabilidad y la fiabilidad.
 			</p>
 		</div>
 		<div class="avatar">
-			<img src={avatar} alt="avatar image" id="avatar"/>
+			<img src="{avatar}" alt="avatar image" id="avatar" />
 		</div>
 	</div>
 	<ul class="timeline">
