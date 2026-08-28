@@ -1,0 +1,181 @@
+/* Mobile-specific styles override */
+@media (pointer: coarse) {
+
+    /* Touch device styles will go here if needed */
+    nav.nav-bar a {
+        font-size: 0.8em;
+        display: flex;
+    }
+
+    #header,
+    #about,
+    #experience,
+    #projects {
+        scroll-snap-stop: always;
+        margin-inline: auto;
+        width: 90vw;
+        padding-top: 4em;
+    }
+
+    #header {
+        height: auto;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    #experience,
+    #projects {
+        height: auto;
+    }
+
+    #header h1 {
+        font-size: 3.5rem;
+    }
+
+    #header .social-links i {
+        font-size: 1.8rem;
+    }
+
+    #about-container {
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+
+    #header h2,
+    #about h2,
+    #experience h2,
+    #projects h2 {
+        font-size: 2rem;
+    }
+
+    #about .info p {
+        font-size: 1rem;
+        width: 90vw;
+    }
+
+    .skills {
+        width: 58vw;
+        font-size: 0.84rem;
+        flex-wrap: wrap;
+        margin-right: 2vw;
+    }
+
+    .tags {
+        width: 30vw;
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .skills h3,
+    .tags h3 {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .skills h5,
+    .skills h4 {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        cursor: pointer;
+        outline: none;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 0;
+        border-bottom: 1px solid var(--loft-color);
+        transition: color 0.2s ease;
+    }
+
+    .skills h5:focus,
+    .skills h4:focus,
+    .sides h3:focus {
+        color: var(--accent-color);
+    }
+
+    .skills h5::after,
+    .skills h4::after,
+    .sides h3::after {
+        content: "▼";
+        font-size: 0.7rem;
+        color: var(--low-color);
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .skills h5:focus::after,
+    .skills h4:focus::after,
+    .sides h3:focus::after {
+        transform: rotate(180deg);
+        color: var(--accent-color);
+    }
+
+    .grid-skills .skill,
+    .sides .focal {
+        display: none !important;
+    }
+
+    .grid-skills h5:focus~.skill,
+    .grid-skills h4:focus~.skill,
+    .sides h3:focus~.focal {
+        display: flex !important;
+    }
+
+    .grid-skills h5:focus~h5~.skill,
+    .grid-skills h5:focus~h4~.skill,
+    .grid-skills h4:focus~h5~.skill,
+    .grid-skills h4:focus~h4~.skill,
+    .sides h3:focus~h3~.focal {
+        display: none !important;
+    }
+
+    .tags li {
+        margin-bottom: 0.3rem;
+    }
+
+    .profesional h3 {
+        font-size: 0.1rem;
+    }
+
+    .pro-view h4,
+    .pro-view h5 {
+        font-size: 0.9rem;
+    }
+
+    .pro-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .pro-details li {
+        font-size: 0.8rem;
+    }
+
+    .aca .focal {
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card {
+        height: 50vh;
+    }
+
+    .project-card picture img {
+        height: 10rem;
+    }
+
+    .carousel-btn {
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

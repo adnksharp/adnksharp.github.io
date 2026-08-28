@@ -1,0 +1,95 @@
+@media (pointer: fine) {
+    body {
+        overflow: hidden;
+    }
+
+    #home {
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+    }
+
+    #home::-webkit-scrollbar {
+        display: none;
+    }
+
+    #header,
+    #about,
+    #experience,
+    #projects {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        max-width: calc(12.0 / 9.0 * 100vh);
+        margin-inline: auto;
+        height: 100vh;
+        padding-top: 4em;
+    }
+
+    #header h1 {
+        font-size: 12rem;
+    }
+
+    #header p {
+        width: 60%;
+        margin: 20px auto 0 auto;
+    }
+
+    #header .social-links i {
+        font-size: 2.5rem;
+    }
+
+    #about-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    #about .info {
+        width: 21em;
+        margin: 0;
+    }
+
+    #about .tags {
+        width: 21em;
+    }
+
+    .grid-skills {
+        column-count: 3;
+    }
+
+    .sides {
+        flex-direction: row;
+        height: calc(100% - 12rem);
+    }
+
+    .pro {
+        flex-direction: row;
+    }
+
+    .pro-menu {
+        width: 20rem;
+    }
+
+    .profesional,
+    .pro-view {
+        height: 100%;
+    }
+
+    .academic {
+        width: 50rem;
+        height: 100%;
+    }
+
+    .project-image img {
+        height: 37.5rem;
+    }
+
+    .carousel-btn {
+        width: 5rem;
+        height: 10rem;
+    }
+}

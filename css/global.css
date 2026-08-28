@@ -14,6 +14,7 @@
     --green-color: #34d399;
     --cyan-color: #41bdda;
     --blue-color: #06b6d4;
+    --loft-color: #88888860;
 }
 
 /* Global resets & styling */
@@ -27,7 +28,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Noto Sans", "Segoe UI", Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 a {
@@ -67,28 +67,11 @@ nav.nav-bar a:hover {
     color: var(--accent-color);
 }
 
-#home {
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
-}
-
-#home::-webkit-scrollbar {
-    display: none;
-}
 
 #header,
 #about,
 #experience,
 #projects {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    max-width: calc(12.0 / 9.0 * 100vh);
-    margin-inline: auto;
-    height: 100vh;
     padding-top: 4em;
 }
 
@@ -115,7 +98,6 @@ nav.nav-bar a:hover {
     animation: glitch 2s linear infinite;
     -webkit-text-stroke: 1px var(--fg-color);
     color: transparent;
-    font-size: 12rem;
     margin: 0;
     position: relative;
     cursor: default;
@@ -128,7 +110,7 @@ nav.nav-bar a:hover {
     left: 0;
     top: 0;
     width: 100%;
-    background: #00000000;
+    background: transparent;
 }
 
 #header h1:before {
@@ -213,8 +195,6 @@ nav.nav-bar a:hover {
 
 #header p {
     font-size: 1.5em;
-    width: 60%;
-    margin: 20px auto 0 auto;
     line-height: 1.6;
     color: var(--low-color);
 }
@@ -227,7 +207,6 @@ nav.nav-bar a:hover {
 }
 
 #header .social-links i {
-    font-size: 2.5rem;
     transition: color 0.3s ease;
 }
 
@@ -260,17 +239,10 @@ nav.nav-bar a:hover {
     color: var(--green-color);
 }
 
-#about-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-}
 
 #about .info {
     font-size: 1.2rem;
     line-height: 1.8;
-    width: 21em;
     margin: 0;
     color: var(--low-color);
 }
@@ -284,7 +256,7 @@ nav.nav-bar a:hover {
     font-size: 1.5rem;
     margin-bottom: 10px;
     margin-top: 0;
-    border-bottom: 1px solid #88888860;
+    border-bottom: 1px solid var(--loft-color);
 }
 
 
@@ -293,7 +265,7 @@ nav.nav-bar a:hover {
 }
 
 .grid-skills {
-    column-count: 3;
+    font-size: 0.89em;
 }
 
 .grid-skills .skill,
@@ -306,17 +278,13 @@ nav.nav-bar a:hover {
     color: var(--low-color);
 }
 
-.grid-skills {
-    font-size: 0.89em;
-}
-
 .grid-skills h4,
 .grid-skills h5 {
     font-size: 1.2rem;
 }
 
 .grid-skills h4 {
-    border-top: 1px solid #88888860;
+    border-top: 1px solid var(--loft-color);
 }
 
 .grid-skills h5 {
@@ -402,7 +370,6 @@ nav.nav-bar a:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 21em;
 }
 
 .tags ul {
@@ -415,19 +382,18 @@ nav.nav-bar a:hover {
     font-size: 1.5rem;
     margin-bottom: 10px;
     margin-top: 0;
-    border-bottom: 1px solid #88888860;
+    border-bottom: 1px solid var(--loft-color);
 }
 
 .sides {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
-    height: calc(100% - 12rem);
 }
 
 .pro {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -440,7 +406,6 @@ nav.nav-bar a:hover {
 .profesional,
 .pro-view {
     width: 100%;
-    height: 100%;
 }
 
 .pro-view h4 {
@@ -456,14 +421,10 @@ nav.nav-bar a:hover {
     color: var(--low-color);
 }
 
-.pro-menu {
-    width: 20rem;
-}
-
 #experience button {
     background-color: var(--bg-color);
     color: var(--low-color);
-    border: 1px solid #88888860;
+    border: 1px solid var(--loft-color);
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -502,7 +463,7 @@ nav.nav-bar a:hover {
     font-weight: bold;
     padding: 0.5rem;
     width: 100%;
-    border-bottom: 1px solid #88888860;
+    border-bottom: 1px solid var(--loft-color);
 }
 
 #pro-software {
@@ -546,8 +507,6 @@ nav.nav-bar a:hover {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    width: 50rem;
-    height: 100%;
 }
 
 .aca-details {
@@ -580,7 +539,7 @@ nav.nav-bar a:hover {
 
 .projects-carousel-section {
     margin-top: 30px;
-    background: #000000;
+    background: var(--bg-color);
 }
 
 .carousel-container {
@@ -605,7 +564,7 @@ nav.nav-bar a:hover {
 }
 
 .project-card {
-    border: 1px solid #1f1f1f;
+    border: 1px solid var(--loft-color);
     padding: 20px;
     box-sizing: border-box;
     height: 100%;
@@ -620,24 +579,22 @@ nav.nav-bar a:hover {
 }
 
 .project-image img {
-    height: 37.5rem;
     width: 100%;
     object-fit: contain;
     margin: auto;
     border-radius: 4px;
     margin-bottom: 10px;
 }
+
 .carousel-btn {
-    color: #88888860;
-    background-color: #00000000;
-    border: 1px solid #88888860;
+    color: var(--loft-color);
+    background-color: transparent;
+    border: 1px solid var(--loft-color);
     font-size: 3rem;
     cursor: pointer;
     z-index: 10;
-    width: 5rem;
-    height: 10rem;
 }
 
 .carousel-btn:hover {
-    color: #ffffff;
+    color: var(--fg-color);
 }
